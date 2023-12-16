@@ -1,0 +1,8 @@
+services:
+  client:
+    image:
+    restart: unless-stopped
+    volumes:
+      - ./configs/client.js:/usr/share/nginx/html/static/env.js
+    ports:
+      - "7000:80"
